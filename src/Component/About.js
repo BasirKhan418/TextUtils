@@ -80,8 +80,8 @@ function About(props) {
             data-bs-parent="#accordionExample"
           >
             <div className="accordion-body" style={setMyStyle}>
-              <strong>Textutils is 100% free to use .About Devloper | Basir khan is a devloper of textutils which can devloped in 2023 
-                | </strong>
+              <strong>Textutils is 100% free to use .About Devloper | Basir khan is a devloper of textutils which is devloped in 2023 March  
+                |Copy Right &#169; All Rights Reserved www.textutils-0.netlify.app</strong>
             </div>
           </div>
         </div>
