@@ -15,9 +15,7 @@ export default function Textform(props) {
     props.showAlert("Converted to lowercase successfully","success")
   };
   const copyText = () => {
-    let text = document.getElementById("myBox");
-    text.select();
-    navigator.clipboard.writeText(text.value);
+    navigator.clipboard.writeText(text);
     props.showAlert("Text copied to clipboard Successfully","success")
   };
   const clearText = () => {
@@ -71,9 +69,9 @@ export default function Textform(props) {
       <div className="container" style={{color:props.mode==="light"?"black":"white"}}>
         <h2>Text Summary</h2>
         <p>
-          {text.split(" ").filter((element)=>{return element.length!==0}).length} Words and {text.length} Character
+          {text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Words and {text.length} Character
         </p>
-        <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes to read</p>
+        <p>{0.008 * text.split(/\s+/).filter((element)=>{return element.length!==0}).length} Minutes to read</p>
         <h2>Preview</h2>
         <p>{text.length>0?text:"Nothing to Preview!"}</p>
       </div>
